@@ -39,4 +39,8 @@ class Reservation(
 
         return sb.toString()
     }
+
+    fun getReservationId(): String {
+        return id
+    }
 }
