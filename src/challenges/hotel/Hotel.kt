@@ -5,7 +5,7 @@ import java.time.LocalDate
 class Hotel(
     private val name: String,
     private val rooms: MutableIterable<Room>,
-    private val reservations: MutableList<Reservation>
+    private val reservations: MutableList<Reservation> = mutableListOf()
 ) {
     fun makeReservation(guest: Guest, roomNumber: Int, checkIn: LocalDate, checkOut: LocalDate): Reservation {
         val room: Room = findRoomByNumber(roomNumber) ?: throw IllegalArgumentException("Room $roomNumber does not exist")
